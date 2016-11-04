@@ -1,0 +1,55 @@
+body{
+/*   background-image: url(img/screenshot.png);
+ */  background-size: cover; /* stackoverflow */
+  width: 100%;
+  height: 700px;
+  margin: 30px;
+  overflow: hidden;
+}
+
+/* #timer{
+  background-color: black;
+  width: 100px;
+  height: 30px;
+  color: white;
+} */
+
+#scoring{
+  background-color: black;
+  width: 300px;
+  height: 50px;
+  color: white;
+  font-family: Arial;
+  font-size: 50px;
+
+}
+
+.ball{
+  background-image: url(img/baseball.png);
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 70%;
+  background-position: 3px 2px;
+  animation: movedown 5.5s linear infinite;
+
+}
+
+@keyframes movedown{
+  0%{
+    top:-10%;
+    right: 30%;
+  } 30% {
+    left: 50%;
+    top: 30%%;
+  } 50%{
+    top: 50%;
+    right: 30%;
+  } 75%{
+    top: 75%;
+    right: 30%;
+  }100%{
+    top: 100%;
+    right: 75%;
+  }
+}
