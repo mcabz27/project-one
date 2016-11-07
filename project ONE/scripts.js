@@ -5,12 +5,7 @@ console.log("loaded");
 
 var body = $('body');
 var score = 0;
-// var ball = $('#ball')
-// var timeBallFalls = Date.now();
-// console.log(timeBallFalls);
-// var time = 0;
-// var timer = $('<div id="timer"></div>');
-// body.append(timer);
+var strikes = 0;
 var scoreBoard = $('<div id="scoring"></div>');
 body.append(scoreBoard);
 var canvas = document.createElement("canvas"); //search canvas on stackoverflow
@@ -37,20 +32,30 @@ function falling() {
       scoreboard();
     });
    check_v_position()
-  }, 1200);
+  }, 1000);
 }
 falling();
 
 
 function check_v_position(){
   $('.ball').each(function(index,ball){
-    // debugger
-    if ($(ball).css('top').replace('px','') > ($(canvas).height()-100) ){
-      console.log('strike!')
+    // debugger help from john
+    if ($(ball).css('top').replace('px','') > ($(canvas).height() - 10) ){
+      strikes += 1;
+      console.log(strikes);
+      $(this).remove();
     }
   })
 }
 
+function endGame(){
+
+
+}
+
+function callStrike(){
+
+}
 
 
 
@@ -67,20 +72,6 @@ function scoreboard(){
 //   }
 // }
 // timerSet();
-
-function endGame(){
-
-}
-
-
-
-
-
-
-
-
-
-
 
 
 

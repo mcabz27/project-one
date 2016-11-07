@@ -7,13 +7,6 @@ body{
   overflow: hidden;
 }
 
-/* #timer{
-  background-color: black;
-  width: 100px;
-  height: 30px;
-  color: white;
-} */
-
 #scoring{
   background-color: black;
   width: 300px;
@@ -21,7 +14,6 @@ body{
   color: white;
   font-family: Arial;
   font-size: 50px;
-
 }
 
 .ball{
