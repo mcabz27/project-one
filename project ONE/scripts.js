@@ -1,13 +1,13 @@
 jQuery(function() {
 console.log("loaded");
-  // var game_start = new Audio('/audio/Charge.mp3');
-  // game_start.play();
 
 var body = $('body');
 var score = 0;
 var strikes = 0;
 var scoreBoard = $('<div id="scoring"></div>');
 body.append(scoreBoard);
+var strikeCount = $('<div id="numberStrikes"></div>');
+body.append(strikeCount);
 var canvas = document.createElement("canvas"); //search canvas on stackoverflow
 canvas.style.background = 'url(img/screenshot.png)'; //GOT FROM STACK OVERFLOW
 canvas.style.height = '700px';
@@ -18,10 +18,9 @@ var ctx = canvas.getContext("2d"); //stackoverflow
 
 // make baseballs fall. when clicked get removed and score +100
 function falling() {
-   setInterval(function(){
+   var ballFall = setInterval(function(){
     var baseball = $('<div class="ball"></div>');
     body.append(baseball);
-    // baseball.css("top", Math.random() * window.innerHeight);
     baseball.css("left", Math.random() * window.innerWidth);
     baseball.css("right", Math.random() * window.innerWidth);
 
@@ -36,43 +35,45 @@ function falling() {
 }
 falling();
 
-
+//checks position of falling balls. removes if get to ceratin point
 function check_v_position(){
   $('.ball').each(function(index,ball){
     // debugger help from john
     if ($(ball).css('top').replace('px','') > ($(canvas).height() - 10) ){
       strikes += 1;
-      console.log(strikes);
+      callStrike();
       $(this).remove();
+      threeStrikes();
     }
   })
 }
 
-function endGame(){
-
-
+//will end game once 3 strikes
+function gameOver(){
+  $('.ball').remove();
 }
 
+//once you get 3 strikes alert game over
+function threeStrikes(){
+  if(strikes === 3 || strikes % 3 === 0){
+    alert('GAME OVER.  Your score is ' + score + '. Click OK to restart!!!!');
+    strikes = 0;
+    score = 0;
+    gameOver();
+  }
+}
+
+//lists strikes.
 function callStrike(){
+  $('#numberStrikes').html('Strikes: ' + strikes);
 
 }
 
 
-
+//lists the score
 function scoreboard(){
   $('#scoring').html('Score: ' + score);
 }
-
-// function timerSet(){ //stack overflow http://stackoverflow.com/questions/4435776/simple-clock-that-counts-down-from-30-seconds-and-executes-a-function-afterward
-//   if(time === 0){
-//     setInterval(function(){
-//       time++
-//       $('#timer').innerHTML = 'Time Passed: ' + time;
-//     }, 1000)
-//   }
-// }
-// timerSet();
-
 
 
 
