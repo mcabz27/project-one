@@ -12,7 +12,7 @@ var canvas = document.createElement("canvas"); //search canvas on stackoverflow
 canvas.style.background = 'url(img/screenshot.png)'; //GOT FROM STACK OVERFLOW
 canvas.style.height = '700px';
 canvas.style.width = '95%';
-canvas.style.border = '3px solid black'
+canvas.style.border = '5px solid black'
 document.body.appendChild(canvas);
 var ctx = canvas.getContext("2d"); //stackoverflow
 
@@ -56,17 +56,17 @@ function gameOver(){
 //once you get 3 strikes alert game over
 function threeStrikes(){
   if(strikes === 3 || strikes % 3 === 0){
-    alert('GAME OVER.  Your score is ' + score + '. Click OK to restart!!!!');
+    alert("YOU'RE OUT.  Your score is " + score + ". Click OK to restart!!!!");
     strikes = 0;
     score = 0;
     gameOver();
   }
+  console.log(strikes)
 }
 
 //lists strikes.
 function callStrike(){
   $('#numberStrikes').html('Strikes: ' + strikes);
-
 }
 
 
