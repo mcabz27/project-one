@@ -12,7 +12,7 @@ var canvas = document.createElement("canvas"); //search canvas on stackoverflow
 canvas.style.background = 'url(img/screenshot.png)'; //GOT FROM STACK OVERFLOW
 canvas.style.height = '700px';
 canvas.style.width = '95%';
-canvas.style.border = '3px solid blue'
+canvas.style.border = '3px solid black'
 document.body.appendChild(canvas);
 var ctx = canvas.getContext("2d"); //stackoverflow
 
