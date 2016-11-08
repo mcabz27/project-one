@@ -1,5 +1,5 @@
 # Click and Catch
-Hello World.  It's pretty simple, catch(click) the falling baseballs as they come down.  If the baseballs touch the bottom of the screen you get a strike.  3 strikes and you're out!
+Hello World. It's pretty simple, catch(click) the falling baseballs as they come down. If the baseballs touch the bottom of the screen you get a strike.  3 strikes and you're out. Good Luck!
 
 #What Technologies I Used
 * HTML
@@ -35,6 +35,7 @@ Make a game that:
 * When a baseball passes a certain point, it should log an out.
 
 ### Wireframe
+![img_5537](https://cloud.githubusercontent.com/assets/22873862/20088516/7ad0a57e-a54e-11e6-9fdc-0b84efdd486b.JPG)
 
 
 
