@@ -39,7 +39,7 @@ falling();
 function check_v_position(){
   $('.ball').each(function(index,ball){
     // debugger help from john
-    if ($(ball).css('top').replace('px','') > ($(canvas).height() - 10) ){
+    if ($(ball).css('top').replace('px','') > ($(canvas).height() - 50) ){
       strikes += 1;
       callStrike();
       $(this).remove();
