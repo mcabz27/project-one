@@ -1,6 +1,12 @@
 # Baseball Game
 Hello World.  It's pretty simple, catch(click) the falling baseballs as they come down.  If the baseballs touch the bottom of the screen you get a strike.  3 strikes and you're out!
 
+#What Technologies I Used
+*HTML
+*Javascript
+*jQuery
+*CSS
+
 # Pseudocoding/Process
 Make a game that:
 * Has baseballs falling down.
