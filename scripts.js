@@ -38,7 +38,7 @@ falling();
 //checks position of falling balls. removes if get to ceratin point
 function check_v_position(){
   $('.ball').each(function(index,ball){
-    // debugger help from john
+    // debugger help from john also looked on stackoverflow
     if ($(ball).css('top').replace('px','') > ($(canvas).height() - 50) ){
       strikes += 1;
       callStrike();
