@@ -8,7 +8,7 @@ var scoreBoard = $('<div id="scoring"></div>');
 body.append(scoreBoard);
 var strikeCount = $('<div id="numberStrikes"></div>');
 body.append(strikeCount);
-var canvas = document.createElement("canvas"); //search canvas on stackoverflow
+var canvas = document.createElement("canvas"); //search canvas on stackoverflowhttps://developer.mozilla.org/en-US/docs/Web/API/Canvas_API
 canvas.style.background = 'url(img/screenshot.png)'; //GOT FROM STACK OVERFLOW
 canvas.style.height = '700px';
 canvas.style.width = '95%';
