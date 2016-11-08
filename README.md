@@ -1,4 +1,4 @@
-# Baseball Game
+# Click and Catch
 Hello World.  It's pretty simple, catch(click) the falling baseballs as they come down.  If the baseballs touch the bottom of the screen you get a strike.  3 strikes and you're out!
 
 #What Technologies I Used
@@ -28,6 +28,13 @@ Make a game that:
     * Make scoreboard that has score and strikes listed.
     * Should be updated with each clicked and missed baseball.
     * Resets to 0 after user loses.
+
+### MVP
+* Baseballs fall from the top of the screen.
+* When clicked, baseballs disappear.
+* When a baseball passes a certain point, it should log an out.
+
+### Wireframe
 
 
 
